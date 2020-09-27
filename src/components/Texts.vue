@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-bind:key="text.id" v-for="text in texts">
-            <TextItem />
+            <TextItem v-bind:text="text"/>
         </div>
     </div>
 </template>
@@ -11,7 +11,7 @@
 
     export default {
         name: "Texts",
-        componets: {
+        components: {
             TextItem
         },
         props: ["texts"]

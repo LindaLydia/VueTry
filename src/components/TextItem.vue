@@ -1,12 +1,13 @@
 <template>
-    <div>
-        <p>Text Item</p>
+    <div class='text-item' v-bind:class="{'is-complete':text.completed}">
+        <p>{{text.title}}</p>
     </div>
 </template>
 
 <script>
     export default {
-        name: "TextItem"
+        name: "TextItem",
+        props: ["text"]
     }
 </script>
 
